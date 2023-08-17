@@ -23,7 +23,7 @@ export default function Cart() {
     //   email: userEmail,
     //   order_date: new Date().toDateString()
     // });
-    let response = await fetch("https://foodkart-92p11sc3y-vaibhavjha187.vercel.app/api/orderData", {
+    let response = await fetch("https://real-jade-lion-tux.cyclic.cloud/api/orderData", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/",
 

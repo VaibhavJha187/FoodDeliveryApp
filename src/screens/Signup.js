@@ -36,7 +36,7 @@ export default function Signup() {
 
   const handleSubmit = async (e) => {
     e.preventDefault();
-    const response = await fetch("https://foodkart-92p11sc3y-vaibhavjha187.vercel.app/api/auth/createuser", {
+    const response = await fetch("https://real-jade-lion-tux.cyclic.cloud/api/auth/createuser", {
       // credentials: 'include',
       // Origin:"http://localhost:3000/login",
       method: 'POST',
