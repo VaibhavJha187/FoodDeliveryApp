@@ -9,7 +9,7 @@ export default function Home() {
   const [foodItem, setFoodItem] = useState([]);
 
   const loadData = async () => {
-    let response = await fetch("https://real-jade-lion-tux.cyclic.cloud/api/foodData", {
+    let response = await fetch("https://foodkart-92p11sc3y-vaibhavjha187.vercel.app/api/foodData", {
       method: "POST",
       headers: {
         'Content-Type': 'application/json'
