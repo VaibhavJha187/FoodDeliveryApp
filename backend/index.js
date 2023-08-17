@@ -4,18 +4,6 @@ const port = 5000
 const mongoDB = require("./db")
 const cors = require("cors")
 app.use(cors());
-app.use((req,res,next)=>{
-  res.header("Access-Control-Allow-Origin","http://localhost:3000");
-  res.header(
-    "Access-Control-Allow-Headers",
-    "Origin,X-Requested-With, Content-Type,Accept");
-  res.header('Access-Control-Allow-Methods: GET, POST, PATCH, PUT, DELETE, OPTIONS');
-
-  next();
-})
-
-
-mongoDB(); 
 app.use((req, res, next) => {
   res.header("Access-Control-Allow-Origin", "*");
   res.header("Access-Control-Allow-Methods", "GET, PUT, POST");
@@ -26,6 +14,9 @@ app.use((req, res, next) => {
   console.log(req.path, req.method);
   next();
 });
+
+
+mongoDB(); 
 app.use(express.json())
 app.use('/api',require("./Routes/CreateUser"));
 app.use('/api',require("./Routes/DisplayData"));
