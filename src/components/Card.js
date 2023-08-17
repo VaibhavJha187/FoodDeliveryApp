@@ -3,6 +3,7 @@ import { useNavigate } from 'react-router-dom';
 import { useDispatchCart, useCart } from './ContextReducer';
 
 export default function Card(props) {
+    // console.log(props);
     let dispatch = useDispatchCart(); 
     let data = useCart()
     const priceRef = useRef();
@@ -10,6 +11,7 @@ export default function Card(props) {
     let priceOptions = Object.keys(options);
      const [qty,setQty] = useState(1)
      const [size,setSize] = useState("")
+
 
     const handleAddToCart = async ()=>{
          let food = []
@@ -50,6 +52,7 @@ export default function Card(props) {
             <div>
                 <div className="card mt-3" style={{ "width": "18rem", "maxHeight": "360px" }}>
                     <img src={props.foodItem.img} className="card-img-top" alt = "..." style = {{height:"120px", objectFit:"fill"}}/>
+                    
                     <div className="card-body">
                         <h5 className="card-title">{props.foodItem.name}</h5>
                         <div className='container w-100'>
