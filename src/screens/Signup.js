@@ -18,7 +18,6 @@ export default function Signup() {
       let longitude = res.coords.longitude;
       return [latitude, longitude]
     })
-    // console.log(latlong)
     let [lat, long] = latlong
     console.log(lat, long)
     const response = await fetch("https://foodkart-92p11sc3y-vaibhavjha187.vercel.app/api/auth/getlocation", {
